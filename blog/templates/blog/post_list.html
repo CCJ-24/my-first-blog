@@ -1,22 +1,16 @@
 <html>
-    <head>
-        <title>court's blog yay</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">court's blog yay</a></h1>
-        </div>
-
-        <div>
-            <h2><a href="">One</a></h2>
-            <p>published: 07.12.2017, 1:26</p>
-            <p>i hate u</p>
-        </div>
-
-        <div>
-            <h2><a href="">Two</a></h2>
-            <p>published: 07.12.2017, 1:27</p>
-            <p>nah jk ur cool come back</p>
-        </div>
-    </body>
+  <head>
+    <title>court's blog yay</title>
+  </head>
+  <body>
+    <div>
+      <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+      {% for post in posts %}
+    <div>
+      <p>published: {{ post.published_date }}</p>
+      <h1><a href="">{{ post.title }}</a></h1>
+      <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
 </html>
